@@ -5,14 +5,20 @@ body {
     background-color: #f0f0f0;
 }
 
+nav {
+    background-color: #333; /* Added a background color for better visibility */
+    padding: 10px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Center align for mobile */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Changed to inline-block for better spacing */
     margin: 0 10px;
 }
 
@@ -31,19 +37,19 @@ main {
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Hide overflow */
+    box-sizing: border-box; /* Ensure padding and borders are included in the total width and height */
 }
 
 .main-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100%; /* Adjusted to use % for responsiveness */
+    height: 100%; /* Adjusted to use % for responsiveness */
     object-fit: cover; /* Cover the entire element while maintaining aspect ratio */
     z-index: 0; /* Ensure the video is behind other content */
 }
 
-/* Hidden by default */
 .clickable-area {
     position: absolute;
     top: 20%; /* Adjust this value to position the clickable area */
@@ -62,4 +68,28 @@ main {
 .clickable-area.visible {
     visibility: visible; /* Make visible */
     opacity: 1; /* Fully visible */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0; /* Adjust margin for stacked items */
+    }
+
+    .clickable-area {
+        top: 10%; /* Adjusted for smaller screens */
+        left: 10%; /* Adjusted for smaller screens */
+        width: 80%; /* Adjusted for smaller screens */
+        height: 20%; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .clickable-area {
+        top: 5%; /* Adjusted for very small screens */
+        left: 5%; /* Adjusted for very small screens */
+        width: 90%; /* Adjusted for very small screens */
+        height: 15%; /* Adjusted for very small screens */
+    }
 }
