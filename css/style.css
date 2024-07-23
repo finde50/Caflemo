@@ -49,20 +49,12 @@ main {
 
 .main-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto; /* Adjusted to use auto for responsiveness */
-    height: 100%; /* Adjusted to use % for responsiveness */
-    transform: translate(-50%, -50%); /* Center the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover; /* Cover the entire element while maintaining aspect ratio */
     z-index: 0; /* Ensure the video is behind other content */
-}
-
-@media (orientation: landscape) {
-    .main-video {
-        width: 100%; /* Adjusted to use % for responsiveness in landscape mode */
-        height: auto; /* Adjusted to use auto for responsiveness in landscape mode */
-    }
 }
 
 .clickable-area {
@@ -87,11 +79,6 @@ main {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block; /* Stack navigation items vertically */
-        margin: 10px 0; /* Adjust margin for stacked items */
-    }
-
     .clickable-area {
         top: 10%; /* Adjusted for smaller screens */
         left: 10%; /* Adjusted for smaller screens */
