@@ -2,6 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Hello, World!');
 
     const clickableArea = document.getElementById('clickable-area-1');
+    const videoElement = document.getElementById('video');
+
+    // Function to set the appropriate video source
+    function setVideoSource() {
+        if (window.innerWidth <= 768) { // Adjust the width threshold as needed
+            videoElement.src = 'assets/video-mobile.mp4';
+        } else {
+            videoElement.src = 'assets/video-desktop.mp4';
+        }
+    }
+
+    // Set the video source on page load
+    setVideoSource();
+
+    // Adjust the video source if the window is resized
+    window.addEventListener('resize', setVideoSource);
 
     // Check if the clickable area exists before adding event listeners
     if (clickableArea) {
