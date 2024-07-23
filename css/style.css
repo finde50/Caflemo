@@ -49,12 +49,20 @@ main {
 
 .main-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjusted to use % for responsiveness */
+    top: 50%;
+    left: 50%;
+    width: auto; /* Adjusted to use auto for responsiveness */
     height: 100%; /* Adjusted to use % for responsiveness */
+    transform: translate(-50%, -50%); /* Center the video */
     object-fit: cover; /* Cover the entire element while maintaining aspect ratio */
     z-index: 0; /* Ensure the video is behind other content */
+}
+
+@media (orientation: landscape) {
+    .main-video {
+        width: 100%; /* Adjusted to use % for responsiveness in landscape mode */
+        height: auto; /* Adjusted to use auto for responsiveness in landscape mode */
+    }
 }
 
 .clickable-area {
