@@ -58,12 +58,6 @@ main {
     z-index: 0; /* Ensure the video is behind other content */
 }
 
-@media (orientation: landscape) {
-    .main-video {
-        width: 100%; /* Adjusted to use % for responsiveness in landscape mode */
-        height: auto; /* Adjusted to use auto for responsiveness in landscape mode */
-    }
-}
 
 .clickable-area {
     position: absolute;
