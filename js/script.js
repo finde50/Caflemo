@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (clickableArea) {
         // Add event listener for clickable area
         clickableArea.addEventListener('click', () => {
-            window.location.href = 'https://www.example.com'; // Replace with your desired URL
+            window.location.href = 'https://www.finde50.com'; // Replace with your desired URL
         });
 
         // Function to toggle visibility
