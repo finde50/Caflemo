@@ -158,7 +158,7 @@ footer {
 /* Footer text styling */
 footer p {
     margin: 0; /* Remove default margins */
-    font-size: 10px; /* Smaller font size for minimal height */
+    font-size: 12px; /* Smaller font size for minimal height */
 }
 
 /* Footer navigation */
