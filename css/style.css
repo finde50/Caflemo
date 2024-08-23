@@ -43,18 +43,24 @@ main {
     box-sizing: border-box; /* Ensure padding and borders are included in the total width and height */
 }
 
+/* Ensures the video occupies the full viewport height and width on mobile devices */
 .video-container {
     position: relative;
-    width: 100%;
-    height: auto; /* Adjusted to fit the video content */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow to avoid scrollbars */
 }
 
 .main-video {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the entire element while maintaining aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the element, preserving aspect ratio */
     z-index: 0; /* Ensure the video is behind other content */
 }
+
 
 .clickable-area {
     position: absolute;
