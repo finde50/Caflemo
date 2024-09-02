@@ -1,4 +1,3 @@
-// js/script.js
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Hello, World!');
 
@@ -8,15 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const muteIcon = document.getElementById('mute-icon');
     const unmuteIcon = document.getElementById('unmute-icon');
 
-    // Function to set the appropriate video source
+    // Function to set the appropriate video source only if it's different from the current source
     function setVideoSource() {
-        if (window.innerWidth <= 768) { // Adjust the width threshold as needed
-            videoElement.src = 'assets/video-mobile.mp4';
-        } else {
-            videoElement.src = 'assets/video-desktop.mp4';
+        let currentSource = videoElement.currentSrc; // Get the current video source
+        let newSource = window.innerWidth <= 768 ? 'assets/video-mobile.mp4' : 'assets/video-desktop.mp4';
+
+        if (currentSource !== newSource) { // Only change source if it's different
+            let currentTime = videoElement.currentTime; // Store the current playback time
+            videoElement.src = newSource; // Change the video source
+            videoElement.load(); // Reload video to apply new source
+            videoElement.currentTime = currentTime; // Restore the video to the previous time
+            videoElement.play(); // Continue playing the video
         }
-        // Reload video to apply new source
-        videoElement.load();
     }
 
     // Set the video source on page load
