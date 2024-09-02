@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Allow vertical scroll */
 }
 
 /* Body styling */
@@ -18,21 +19,75 @@ body {
     padding: 0;
 }
 
+/* Header styling */
+header {
+    background-color: #333; /* Consistent background color */
+    color: white;
+    padding: 10px 20px; /* Padding for space around the title */
+    text-align: center; /* Center the title horizontally */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    position: relative; /* Allow for absolute positioning inside */
+}
+
+/* Header title styling */
+header h1 {
+    margin: 0; /* Remove default margins */
+    font-size: 28px; /* Default font size for larger screens */
+    line-height: 1.2; /* Adjust line height */
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #666; /* You can adjust the color as needed */
+    margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and mobile devices up to 768px */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px; /* Adjust font size for tablets and mobile devices */
+    }
+
+    header h2 {
+        font-size: 1.0em;
+        color: #666; /* You can adjust the color as needed */
+        margin: 0;
+        padding: 0 20px; 
+        text-align: center; 
+    }
+}
+
+/* For very small mobile devices up to 480px */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px; /* Adjust font size for very small mobile devices */
+    }
+
+    header h2 {
+        font-size: 1.0em;
+        color: #666; /* You can adjust the color as needed */
+        margin: 0;
+        padding: 0 20px; 
+        text-align: center; 
+    }
+}
+
+
 /* Main content styling */
 main {
-    position: relative;
-    width: 100vw; /* Full viewport width */
     flex: 1; /* Allows main to grow and fill available space */
-    overflow: hidden; /* Hide overflow */
-    box-sizing: border-box; /* Include padding and borders in total width and height */
-    padding-bottom: 5px; /* Add padding to avoid content being covered by footer */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
 }
 
 /* Video container styling */
 .video-container {
     position: relative;
     width: 100vw; /* Full viewport width */
-    height: calc(100vh - 50px); /* Full viewport height minus footer height */
+    height: calc(100vh - 40px); /* Full viewport height minus footer height */
     overflow: hidden; /* Hide any overflow */
     margin: 0; /* No margin */
     padding: 0; /* No padding */
@@ -53,7 +108,6 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the button */
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.2);
     color: #e4e4e4;
