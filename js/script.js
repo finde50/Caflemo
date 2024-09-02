@@ -7,25 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const muteIcon = document.getElementById('mute-icon');
     const unmuteIcon = document.getElementById('unmute-icon');
 
-    // Function to set the appropriate video source only if it's different from the current source
+    // Function to set the appropriate video source without reloading the video
     function setVideoSource() {
-        let currentSource = videoElement.currentSrc; // Get the current video source
-        let newSource = window.innerWidth <= 768 ? 'assets/video-mobile.mp4' : 'assets/video-desktop.mp4';
+        const isMobile = window.innerWidth <= 768;
+        const newSource = isMobile ? 'assets/video-mobile.mp4' : 'assets/video-desktop.mp4';
 
-        if (currentSource !== newSource) { // Only change source if it's different
-            let currentTime = videoElement.currentTime; // Store the current playback time
-            videoElement.src = newSource; // Change the video source
-            videoElement.load(); // Reload video to apply new source
-            videoElement.currentTime = currentTime; // Restore the video to the previous time
-            videoElement.play(); // Continue playing the video
+        // Check if the current source is different from the desired source
+        if (videoElement.getAttribute('src') !== newSource) {
+            videoElement.setAttribute('src', newSource);
+            videoElement.play(); // Resume playback if the video was playing
         }
     }
 
     // Set the video source on page load
     setVideoSource();
 
-    // Adjust the video source if the window is resized
-    window.addEventListener('resize', setVideoSource);
+    // Adjust the video source if the window is resized without restarting the video
+    window.addEventListener('resize', () => {
+        const wasPlaying = !videoElement.paused; // Check if the video is playing
+        setVideoSource();
+        if (wasPlaying) {
+            videoElement.play(); // Resume playback if the video was playing
+        }
+    });
 
     // Function to handle mute/unmute toggle
     function toggleMute() {
