@@ -1,0 +1,161 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+header h1 {
+    font-size: 30px; /* Default font size for larger screens */
+    margin-bottom: 2px; /* Space between h1 and p */
+}
+
+header p {
+    font-size: 22px; /* Font size for the new paragraph */
+    margin: 0; /* Remove default margin */
+    line-height: 1.4; /* Line height for readability */
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+main video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Hide mobile video by default */
+.video-mobile {
+    display: none;
+}
+
+/* Hide desktop video on smaller screens */
+@media (max-width: 768px) {
+    .video-desktop {
+        display: none;
+    }
+
+    .video-mobile {
+        display: block;
+        width: 100%; /* Ensure it scales to fit smaller screens */
+        height: auto;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #ff04af; /* Color when the link is hovered */
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px; /* Default font size for larger screens */
+        margin-bottom: 2px; /* Space between h1 and p */
+    }
+    
+    header p {
+        font-size: 16px; /* Font size for the new paragraph */
+        margin: 0; /* Remove default margin */
+        line-height: 1.4; /* Line height for readability */
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    footer p {
+        margin: 5px 0;
+        font-size: 10px;
+    }
+    
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    footer a:hover {
+        color: #ff04af; /* Color when the link is hovered */
+        text-decoration: underline;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px; /* Default font size for larger screens */
+        margin-bottom: 2px; /* Space between h1 and p */
+    }
+    
+    header p {
+        font-size: 16px; /* Font size for the new paragraph */
+        margin: 0; /* Remove default margin */
+        line-height: 1.4; /* Line height for readability */
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    footer p {
+        margin: 5px 0;
+        font-size: 10px;
+    }
+    
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    footer a:hover {
+        color: #ff04af; /* Color when the link is hovered */
+        text-decoration: underline;
+    }
+}

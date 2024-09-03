@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Caflemo</h1>
+        <p>Share the moments captured in fleeting moments!</p>
+    </header>
+    <main>
+        <!-- Default video for desktop/larger screens -->
+        <video id="video-desktop" class="video-desktop" width="1920" height="1080" autoplay loop muted>
+            <source src="movies/Video-Desktop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Video for mobile view -->
+        <video id="video-mobile" class="video-mobile" width="1080" height="1080" autoplay loop muted>
+            <source src="movies/Video-Mobile.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Use</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
