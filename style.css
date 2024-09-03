@@ -20,13 +20,12 @@ header {
     text-align: center;
 }
 header h1 {
-    font-size: 36px; /* Default font size for larger screens */
-    margin-bottom: 2px; /* Space between h1 and p */
+    font-size: 30px; /* Default font size for larger screens */
     font-family: 'Sansita Swashed', cursive;
 }
 
 header p {
-    font-size: 22px; /* Font size for the new paragraph */
+    font-size: 20px; /* Font size for the new paragraph */
     margin: 0; /* Remove default margin */
     line-height: 1.4; /* Line height for readability */
     color: #949494;
