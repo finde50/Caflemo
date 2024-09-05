@@ -119,6 +119,20 @@ main video {
     }
 }
 
+/* Ensure desktop video is visible on foldable devices with 6:5 aspect ratio */
+@media (max-width: 768px) and (aspect-ratio: 6/5) {
+    .video-desktop {
+        display: block; /* Show desktop video on opened foldable devices */
+        width: 100%; /* Ensure it scales properly */
+        height: auto;
+    }
+
+    .video-mobile {
+        display: none; /* Hide mobile video on opened foldable devices */
+    }
+}
+
+
 /* Footer Styles */
 footer {
     background-color: #2b2b2b;
