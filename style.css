@@ -94,6 +94,7 @@ main {
     height: auto;
 }
 
+/* Main video styles */
 main video {
     max-width: 100%;
     height: auto;
@@ -106,20 +107,33 @@ main video {
     display: none;
 }
 
-/* Hide desktop video on smaller screens */
-@media (max-width: 768px) {
+/* Display desktop video on tablets and larger screens */
+@media (min-width: 769px) {
     .video-desktop {
-        display: none;
+        display: block; /* Show desktop video */
+        width: 100%; /* Ensure it scales properly */
+        height: auto;
     }
 
     .video-mobile {
-        display: block;
+        display: none; /* Hide mobile video */
+    }
+}
+
+/* Hide desktop video on mobile screens */
+@media (max-width: 768px) {
+    .video-desktop {
+        display: none; /* Hide desktop video on smaller screens */
+    }
+
+    .video-mobile {
+        display: block; /* Show mobile video */
         width: 100%; /* Ensure it scales to fit smaller screens */
         height: auto;
     }
 }
 
-/* Ensure desktop video is visible on foldable devices with 6:5 aspect ratio */
+/* Ensure desktop video is visible on foldable devices with a 6:5 aspect ratio */
 @media (max-width: 768px) and (aspect-ratio: 6/5) {
     .video-desktop {
         display: block; /* Show desktop video on opened foldable devices */
@@ -131,6 +145,7 @@ main video {
         display: none; /* Hide mobile video on opened foldable devices */
     }
 }
+
 
 
 /* Footer Styles */
