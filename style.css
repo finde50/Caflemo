@@ -21,7 +21,6 @@ header {
 }
 header h1 {
     font-size: 30px; /* Default font size for larger screens */
-    font-family: 'Sansita Swashed', cursive;
 }
 
 header p {
@@ -33,10 +32,30 @@ header p {
 
 /* Main Content Styles */
 main {
-    max-width: 1200px;
+    max-width: 90%; /* Default for larger screens */
     margin: 20px auto;
     padding: 0 20px;
 }
+
+@media (max-width: 1200px) {
+    main {
+        max-width: 95%; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 98%; /* Almost full width on tablet and below */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        max-width: 100%; /* Full width for mobile */
+        padding: 0 10px; /* Reduce padding on small screens */
+    }
+}
+
 
 /* Video Container */
 .video-container {
