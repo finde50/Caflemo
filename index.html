@@ -1,194 +1,43 @@
-/* General Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Caflemo</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #333;
-    color: #333;
-}
+    </head>
+<body>
 
-/* Header Styles */
-header {
-    background-color: #2b2b2b;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-header h1 {
-    font-size: 30px; /* Default font size for larger screens */
-}
-
-header p {
-    font-size: 20px; /* Font size for the new paragraph */
-    margin: 0; /* Remove default margin */
-    line-height: 1.4; /* Line height for readability */
-    color: #949494;
-}
-
-/* Main Content Styles */
-main {
-    max-width: 90%; /* Default for larger screens */
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-@media (max-width: 1200px) {
-    main {
-        max-width: 95%; /* Adjust for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        max-width: 98%; /* Almost full width on tablet and below */
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        max-width: 100%; /* Full width for mobile */
-        padding: 0 10px; /* Reduce padding on small screens */
-    }
-}
-
-/* Foldable Device Support (6:5 aspect ratio) */
-@media (min-width: 768px) and (aspect-ratio: 6/5) {
-    main {
-        max-width: 85%; /* Slightly larger main content area for foldables */
-        margin: 20px auto;
-        padding: 0 30px; /* Adjust padding for larger screen estate */
-    }
-}
-
-
-/* Video Container */
-.video-container {
-    position: relative;
-    max-width: 100%; /* Ensure the container is responsive */
-}
-
-/* Embedded Button Styles */
-.mute-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 10px;
-    font-size: 5px; /* Adjust size for the icon */
-    background-color: rgba(255, 4, 175, 0.8);
-    color: #fff;
-    border: none;
-    border-radius: 50%; /* Make it circular */
-    cursor: pointer;
-    z-index: 10;
-    transition: background-color 0.3s;
-}
-
-.mute-button:hover {
-    background-color: rgba(228, 3, 153, 0.8);
-}
-
-/* Adjust icon size */
-.mute-button i {
-    font-size: 24px; /* Icon size */
-}
-
-/* Ensure videos are responsive within the container */
-.video-container video {
-    max-width: 100%;
-    height: auto;
-}
-
-main video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
-}
-
-/* Hide mobile video by default */
-.video-mobile {
-    display: none;
-}
-
-/* Hide desktop video on smaller screens */
-@media (max-width: 768px) {
-    .video-desktop {
-        display: none;
-    }
-
-    .video-mobile {
-        display: block;
-        width: 100%; /* Ensure it scales to fit smaller screens */
-        height: auto;
-    }
-}
-
-/* Footer Styles */
-footer {
-    background-color: #2b2b2b;
-    color: #fff;
-    text-align: center;
-    padding: 2px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
-    font-size: 12px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    color: #ff04af; /* Color when the link is hovered */
-    text-decoration: underline;
-}
-
-/* Media Queries */
-
-/* For tablets and below */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 20px; /* Default font size for larger screens */
-        margin-bottom: 2px; /* Space between h1 and p */
-    }
+    <main>
+        <div class="video-container">
+            <video id="video-desktop" class="video-desktop" width="1920" height="1080" autoplay loop muted>
+                <source src="movies/Video-Desktop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
     
-    header p {
-        font-size: 14px; /* Font size for the new paragraph */
-        margin: 0; /* Remove default margin */
-        line-height: 1.4; /* Line height for readability */
-    }
-
-    main {
-        padding: 0 10px;
-    }
-
-    footer p {
-        margin: 5px 0;
-        font-size: 10px;
-    }
+            <video id="video-mobile" class="video-mobile" width="1080" height="1080" autoplay loop muted>
+                <source src="movies/Video-Mobile.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
     
-    footer a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-
-    footer a:hover {
-        color: #ff04af; /* Color when the link is hovered */
-        text-decoration: underline;
-    }
-}
-
-
+            <!-- Mute/Unmute Button with Icon -->
+            <button id="mute-toggle" class="mute-button">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+        </div>
+    </main>
+    
+    
+    <footer>
+        <p>FINde50 LLC &copy; 2024</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Use</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
