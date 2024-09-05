@@ -56,16 +56,6 @@ main {
     }
 }
 
-/* Foldable Device Support (6:5 aspect ratio) */
-@media (min-width: 768px) and (aspect-ratio: 6/5) {
-    main {
-        max-width: 85%; /* Slightly larger main content area for foldables */
-        margin: 20px auto;
-        padding: 0 30px; /* Adjust padding for larger screen estate */
-    }
-}
-
-
 /* Video Container */
 .video-container {
     position: relative;
