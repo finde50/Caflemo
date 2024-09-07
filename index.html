@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Caflemo</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
-
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Caflemo</title>
+    <meta name="Caflemo" content="Share your stories captured in fleeting moments">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="movies/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="movies/favicon-72x72.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="movies/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="movies/favicon-144x144.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="movies/favicon-192x192.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+</head>
 <body>
 
     <main>
         <div class="video-container">
-            <video id="video-desktop" class="video-desktop" width="1920" height="1080" autoplay loop muted>
+            <video id="video-desktop" class="video-desktop" width="1920" height="1080" autoplay loop muted poster="movies/thumbnail-desktop.jpg">
                 <source src="movies/Video-Desktop.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
     
-            <video id="video-mobile" class="video-mobile" width="1080" height="1080" autoplay loop muted>
+            <video id="video-mobile" class="video-mobile" width="1080" height="1080" autoplay loop muted poster="movies/thumbnail-mobile.jpg">
                 <source src="movies/Video-Mobile.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -29,7 +37,6 @@
             </button>
         </div>
     </main>
-    
     
     <footer>
         <p>FINde50 LLC &copy; 2024</p>
