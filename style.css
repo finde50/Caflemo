@@ -229,7 +229,7 @@ footer {
     }
 
     .info-section p {
-        font-size: 0.9rem; /* Smaller font size for p */
+        font-size: 1rem; /* Smaller font size for p */
     }
 
     .additional-info h2 {
@@ -237,7 +237,7 @@ footer {
     }
 
     .additional-info p {
-        font-size: 0.9rem; /* Medium font size for p */
+        font-size: 1rem; /* Medium font size for p */
     }
 }
 
