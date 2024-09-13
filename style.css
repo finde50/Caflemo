@@ -226,18 +226,22 @@ footer {
      /* Font sizes for h2 and p in the new section for mobile devices */
      .info-section h2 {
         font-size: 1.2rem; /* Smaller font size for h2 */
+        text-align: left;
     }
 
     .info-section p {
         font-size: 1rem; /* Smaller font size for p */
+        text-align: left;
     }
 
     .additional-info h2 {
         font-size: 1.2rem; /* Medium font size for h2 */
+        text-align: left;
     }
 
     .additional-info p {
         font-size: 1rem; /* Medium font size for p */
+        text-align: left;
     }
 }
 
