@@ -21,7 +21,7 @@ header h1 {
     margin: 0; /* Remove default margin above and below the h1 */
     padding: 0; /* Remove default padding */
     font-size: 3rem; /* Large font for header */
-    background: linear-gradient(19deg, #ff04aF, #fcf300); /* Gradient colors */
+    background: #ee04f7; /* Gradient colors */
     background-clip: text; /* Standard property to clip background to text */
     -webkit-background-clip: text; /* Vendor prefix for WebKit browsers */
     -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
@@ -55,7 +55,7 @@ header, footer {
     position: absolute;
     top: 20px; /* Adjust as needed */
     left: 15px; /* Adjust as needed */
-    background: rgba(255, 4, 175, 0.8); /* Semi-transparent background */
+    background: rgba(255, 4, 175, 0.6); /* Semi-transparent background */
     color: #fff; /* White text color */
     border: none;
     border-radius: 50%; /* Circular button */
