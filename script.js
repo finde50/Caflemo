@@ -5,9 +5,9 @@ function updateVideoSource() {
 
     // Update video source
     if (window.innerWidth < 500) {
-        video.src = 'movies/Video-Mobile.mp4';
+        video.src = 'https://caflemo-intro-video.s3.us-east-2.amazonaws.com/Video-Mobile.mp4';
     } else {
-        video.src = 'movies/Video-Desktop.mp4';
+        video.src = 'https://caflemo-intro-video.s3.us-east-2.amazonaws.com/Video-Desktop.mp4';
     }
 
     // Restore playback position
