@@ -27,6 +27,21 @@ header h1 {
     -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
 }
 
+/* "Back Home" Button */
+.back-home-button {
+    display: inline-block;
+    margin-top: 10px; /* Adds space below the header */
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.back-home-button:hover {
+    color: #e905ac; /* Darker shade for hover */
+}
+
 main {
     padding: 0.5rem; /* Minimal padding around the main content */
     text-align: center;
